@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    background: linear-gradient(to right, #1a343d, #264651);
+
+}
+
+
+
+#test{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#test img{
+    height: 400px;
+    width: 400px;
+}
+
+.Artiste, .Departement{
+    display: flex;
+    justify-content: center;
+}
+
+
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 4px;
+  }
+
+
+.GO{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius:5px;
+    color:#383837;
+    box-shadow: 0px 5px 0px #383837, inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+.GO:hover{
+    transform: scale(1.1);   
+}
+
+.GO:hover{
+    transform: scale(1.1);   
+}
