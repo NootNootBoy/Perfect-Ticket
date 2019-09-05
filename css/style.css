@@ -1,10 +1,8 @@
 body{
     margin: 0;
-    background: linear-gradient(to right, #1a343d, #264651);
+    background: no-repeat linear-gradient(to right, #1a343d, #264651);
 
 }
-
-
 
 #test{
     display: flex;
@@ -17,20 +15,21 @@ body{
     width: 400px;
 }
 
-.Artiste, .Departement{
+.ArtisteStart, .DepartementStart{
     display: flex;
     justify-content: center;
 }
 
 
 input[type=text] {
-    width: 40%;
+    width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid rgb(233, 233, 233);
     border-radius: 4px;
   }
+
 
 
 .GO{
@@ -57,3 +56,49 @@ input[type=text] {
 .GO:hover{
     transform: scale(1.1);   
 }
+
+.containerResultat{
+    background-color: white;
+    display: inline-block;
+    width: 100%;
+}
+
+#pagetop {
+    margin-top: 30px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+
+.btn{
+    padding: 8px 25px;
+    border: 2px solid #FFF;
+    border-image: linear-gradient(to right, #1a343d, #264651) 20 stretch;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFF;
+    background: linear-gradient(to right, #1a343d, #264651);
+    cursor: pointer;
+    transition: all .3s;
+      filter: hue-rotate(0deg) saturate(1);
+}
+
+.search{
+
+    color: white;
+}
+
+.search:hover{
+    transform: scale(1.1);   
+}
+
+.search:hover{
+    transform: scale(0.9);   
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+
+      }
+
