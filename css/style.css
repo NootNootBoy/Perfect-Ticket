@@ -1,8 +1,48 @@
 body{
     margin: 0;
-    background: no-repeat linear-gradient(to right, #1a343d, #264651);
-
+	padding: 0;
+    background: linear-gradient(to right, #E0EAFC, #CFDEF3);
+    overflow: hidden;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#containerDL{
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    background-color: #1a343d;
+    border-radius: 20px;
+    top: 50px;
+    right: 50px;
+    transition: 0.5s;
+}
+#scrollDL{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    left: 5px;
+    top: 5px;
+    transition: 0.5s;
+}
+.containerAccueil{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
 
 #test{
     display: flex;
@@ -11,8 +51,8 @@ body{
 }
 
 #test img{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 .ArtisteStart, .DepartementStart{
@@ -20,27 +60,46 @@ body{
     justify-content: center;
 }
 
-
-input[type=text] {
+#testinput3,
+#testinput2,
+#testinput {
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid rgb(233, 233, 233);
+    background-color: #1a343d;
+    border: 2px solid rgb(177, 177, 177);
     border-radius: 4px;
+    border: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
   }
+  #testinput3::placeholder,
+  #testinput2::placeholder,
+  #testinput::placeholder{
+    color: rgb(180, 191, 207);
+}
+#testinput3:focus,
+#testinput2:focus,
+#testinput:focus{
+    border: 2px solid #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
 
 
-
-.GO{
+#btnGO{
     display: block;
     margin: auto;
+    width: 300px;
     margin-top: 20px;
-    background-color: white;
+    background-color: #1a343d;
     padding: 15px;
     border-radius:5px;
-    color:#383837;
-    box-shadow: 0px 5px 0px #383837, inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.3);
+    color:#ffffff;
+    box-shadow: 0px 5px 0px #ffffff, inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.4s ease;
     text-decoration: none;
     text-align: center;
@@ -49,24 +108,31 @@ input[type=text] {
     font-weight: bold;
 }
 
-.GO:hover{
+#btnGO a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+#btnGO:hover{
     transform: scale(1.1);   
 }
 
-.GO:hover{
+#btnGO:hover{
     transform: scale(1.1);   
 }
 
-.containerResultat{
+#containerResultat{
     background-color: white;
-    display: inline-block;
+    display: none;
     width: 100%;
+    min-height: 100vh;
 }
 
 #pagetop {
     margin-top: 30px;
     margin-left: 300px;
-    margin-bottom: 50px;
 }
 
 .btn{
@@ -79,7 +145,7 @@ input[type=text] {
     background: linear-gradient(to right, #1a343d, #264651);
     cursor: pointer;
     transition: all .3s;
-      filter: hue-rotate(0deg) saturate(1);
+	filter: hue-rotate(0deg) saturate(1);
 }
 
 .search{
@@ -99,6 +165,6 @@ input[type=text] {
 
 @media screen and (max-width: 768px) {
     
-
+		
       }
 
