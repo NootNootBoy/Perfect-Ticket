@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+	padding: 0;
+    background: linear-gradient(to right, #E0EAFC, #CFDEF3);
+    overflow: hidden;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#containerDL{
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    background-color: #1a343d;
+    border-radius: 20px;
+    top: 50px;
+    right: 50px;
+    transition: 0.5s;
+}
+#scrollDL{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    left: 5px;
+    top: 5px;
+    transition: 0.5s;
+}
+.containerAccueil{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+#test{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#test img{
+    height: 300px;
+    width: 300px;
+}
+
+.ArtisteStart, .DepartementStart{
+    display: flex;
+    justify-content: center;
+}
+
+#testinput3,
+#testinput2,
+#testinput {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #1a343d;
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 4px;
+    border: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  #testinput3::placeholder,
+  #testinput2::placeholder,
+  #testinput::placeholder{
+    color: rgb(180, 191, 207);
+}
+#testinput3:focus,
+#testinput2:focus,
+#testinput:focus{
+    border: 2px solid #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+
+#btnGO{
+    display: block;
+    margin: auto;
+    width: 300px;
+    margin-top: 20px;
+    background-color: #1a343d;
+    padding: 15px;
+    border-radius:5px;
+    color:#ffffff;
+    box-shadow: 0px 5px 0px #ffffff, inset 0px 2px 0px rgba(255, 255, 255, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+#btnGO a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+#btnGO:hover{
+    transform: scale(1.1);   
+}
+
+#btnGO:hover{
+    transform: scale(1.1);   
+}
+
+#containerResultat{
+    background-color: white;
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#pagetop {
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+.btn{
+    padding: 8px 25px;
+    border: 2px solid #FFF;
+    border-image: linear-gradient(to right, #1a343d, #264651) 20 stretch;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFF;
+    background: linear-gradient(to right, #1a343d, #264651);
+    cursor: pointer;
+    transition: all .3s;
+	filter: hue-rotate(0deg) saturate(1);
+}
+
+.search{
+
+    color: white;
+}
+
+.search:hover{
+    transform: scale(1.1);   
+}
+
+.search:hover{
+    transform: scale(0.9);   
+}
+
+
+
+@media screen and (max-width: 768px) {
+    
+		
+      }
+
