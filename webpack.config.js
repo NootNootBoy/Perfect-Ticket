@@ -1,35 +1,35 @@
-const webpack = require("webpack");
-const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
-
-let config = {
-  entry: "./src/index.js",
-  output: {
-    path: path.resolve(__dirname, "./public"),
-    filename: "./bundle.js"
-  },
-  module: {
-      rules: [{
-        test: /\.scss$/,
-        use: ExtractTextWebpackPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader', 'postcss-loader'],
-        })
-        }]
-    },
-    plugins: [
-      new ExtractTextWebpackPlugin("styles.css")
-    ]
-}
-
 module.exports = {
-  entry: 'index.js',
-  output: {
-    path: path.resolve(__dirname, './public'),
-    filename: './bundle.js'
+  entry: "./src/index.js",
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader"
+        ]
+      }
+    ]
   },
-  plugins: [new HtmlWebpackPlugin()]
+  output: {
+    path: path.resolve(__dirname, "./dist"),
+    filename: "bundle.js"
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html"
+    }),
+    new CopyPlugin([{ from: "./src/images", to: "images" }])
+  ]
 };
-module.exports = config;
