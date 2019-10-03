@@ -1,6 +1,4 @@
-button {
-  color: $color-grey;
-}
+$darkblue: #1a343d;
 
 body {
   margin: 0;
@@ -23,7 +21,7 @@ html {
   position: absolute;
   width: 70px;
   height: 40px;
-  background-color: #1a343d;
+  background-color: $darkblue;
   border-radius: 20px;
   top: 50px;
   right: 50px;
@@ -70,7 +68,7 @@ html {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: #1a343d;
+  background-color: $darkblue;
   border: 2px solid rgb(177, 177, 177);
   border-radius: 4px;
   border: none;
@@ -97,7 +95,7 @@ html {
   margin: auto;
   width: 300px;
   margin-top: 20px;
-  background-color: #1a343d;
+  background-color: $darkblue;
   padding: 15px;
   border-radius: 5px;
   color: #ffffff;
@@ -122,30 +120,61 @@ html {
   transform: scale(1.1);
 }
 
-#btnGO:hover {
-  transform: scale(1.1);
-}
-
 #containerResultat {
   background-color: white;
   display: none;
   width: 100%;
+  padding: 0px 0;
   min-height: 100vh;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
 }
 
-#pagetop {
-  margin-top: 30px;
-  margin-left: 300px;
+#inner-width {
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.containerResultatRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerResultatCol1 {
+  flex: 80%;
+}
+.containerResultatCol2 {
+  flex: 20%;
+  margin: auto;
+}
+.bar {
+  padding-right: 30px;
+}
+.bar #testinput3 {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: $darkblue;
+  border: 2px solid rgb(177, 177, 177);
+  border-radius: 4px;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.btnrecherche {
 }
 
 .btn {
   padding: 8px 25px;
   border: 2px solid #fff;
-  border-image: linear-gradient(to right, #1a343d, #264651) 20 stretch;
+  border-image: linear-gradient(to right, $darkblue, #264651) 20 stretch;
   font-size: 1em;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(to right, #1a343d, #264651);
+  background: linear-gradient(to right, $darkblue, #264651);
   cursor: pointer;
   transition: all 0.3s;
   filter: hue-rotate(0deg) saturate(1);
@@ -160,8 +189,67 @@ html {
 }
 
 .search:hover {
-  transform: scale(0.9);
+  transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  #containerDL {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: $darkblue;
+    border-radius: 10px;
+    top: 30px;
+    right: 20px;
+    transition: 0.5s;
+  }
+  #scrollDL {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    top: 3px;
+    transition: 0.5s;
+  }
 
-@media screen and (max-width: 768px) {
+  .containerResultatCol1 {
+    flex: 60%;
+  }
+  .containerResultatCol2 {
+    flex: 40%;
+    margin: auto;
+  }
+
+  .btn {
+    padding: 8px 25px;
+    border: 2px solid #fff;
+    border-image: linear-gradient(to right, $darkblue, #264651) 20 stretch;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, $darkblue, #264651);
+    cursor: pointer;
+    transition: all 0.3s;
+    filter: hue-rotate(0deg) saturate(1);
+  }
+
+  .bar #testinput3 {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: $darkblue;
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 4px;
+    border: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
 }

@@ -14,7 +14,7 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-  </head>
+  <link href="styles.css" rel="stylesheet"></head>
 
   <body>
     <div class="container">
@@ -55,34 +55,40 @@
             />
             <span class="validity"></span>
           </div>
-          <div id="btnGO" onclick="ani()">
+          <button id="btnGO">
             <a href="#aboutSection">GO</a>
-          </div>
+          </button>
         </form>
       </div>
       <div id="containerResultat">
-        <div id="pagetop">
-          <form>
-            <label for="uname"></label>
-            <div class="barderecherche">
-              <input
-                type="text"
-                id="testinput2"
-                name="name"
-                required
-                size="45"
-                placeholder="Artiste..."
-                minlength="1"
-                maxlength="32"
-              />
-              <span class="validity"></span>
-              <button class="btn search">Rechercher</button>
+        <div id="inner-width">
+          <div class="containerResultatRow">
+            <div class="containerResultatCol1">
+              <div class="bar">
+                <label for="uname"></label>
+                <input
+                  type="text"
+                  id="testinput3"
+                  name="name"
+                  required
+                  size="45"
+                  placeholder="Artiste..."
+                  minlength="1"
+                  maxlength="32"
+                />
+                <span class="validity"></span>
+              </div>
             </div>
-          </form>
+            <div class="containerResultatCol2">
+              <div class="btnrecherche">
+                <button class="btn search">Rechercher</button>
+              </div>
+          </div>
         </div>
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="bundle.js"></script>
     <script src="index.js"></script>
   <script type="text/javascript" src="bundle.js"></script></body>
 </html>

@@ -1,22 +1,22 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
+const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader"
-        ]
+        test: /\.scss$/,
+        use: ["css-hot-loader"].concat(
+          ExtractTextWebpackPlugin.extract({
+            fallback: "style-loader",
+            use: ["css-loader", "sass-loader", "postcss-loader"]
+          })
+        )
       }
     ]
   },
@@ -30,7 +30,8 @@ module.exports = {
       template: "./src/index.html",
       filename: "index.html"
     }),
-    new CopyPlugin([{ from: "./src/images", to: "images" }])
+    new CopyPlugin([{ from: "./src/images", to: "images" }]),
+    new ExtractTextWebpackPlugin("styles.css")
   ],
   devServer: {
     contentBase: path.resolve(__dirname, "./dist"),
