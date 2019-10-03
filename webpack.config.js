@@ -31,5 +31,13 @@ module.exports = {
       filename: "index.html"
     }),
     new CopyPlugin([{ from: "./src/images", to: "images" }])
-  ]
+  ],
+  devServer: {
+    contentBase: path.resolve(__dirname, "./dist"),
+    historyApiFallback: true,
+    inline: true,
+    open: true,
+    hot: true
+  },
+  devtool: "eval-source-map"
 };
