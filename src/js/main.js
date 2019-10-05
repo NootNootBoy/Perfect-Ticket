@@ -36,7 +36,7 @@ document.getElementById("scrollDL").onclick = function() {
     document.getElementById("containerResultat").style.background = "#1a343d";
     document.getElementById("btnGO").style.backgroundColor = "#fff";
     var x = document.getElementById("btnGO");
-    var y = x.getElementsByTagName("a");
+    var y = x.getElementsByTagName("p");
     var i;
     for (i = 0; i < y.length; i++) {
       y[i].style.color = "#1a343d";
@@ -46,7 +46,8 @@ document.getElementById("scrollDL").onclick = function() {
   }
 };
 
-document.getElementById("btnGO").onclick = function ani() {
+document.getElementById("btnGO").onclick = function ani(e) {
+  e.preventDefault();
   console.log("test");
   document.getElementById("containerResultat").style.display = "block";
   window.scroll(0, 1000);
@@ -54,3 +55,23 @@ document.getElementById("btnGO").onclick = function ani() {
     document.getElementById("containerAccueil").style.display = "none";
   }, 1000);
 };
+
+let callBackGetSuccess = function(data) {
+  console.log("donnees api", data);
+};
+
+function buttonClickGET() {
+  APIKEY = "MxqV3TAXu3y8Xg8FarGmpSyAcB5VaRyN";
+  let url =
+    "https://app.ticketmaster.com/discovery/v2/events.json?apikey=" + APIKEY;
+  $.get(url, callBackGetSuccess)
+    .done(function() {
+      //alert("second succes");
+    })
+    .fail(function() {
+      alert("error");
+    })
+    .always(function() {
+      //alert ("finished");
+    });
+}

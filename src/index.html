@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>Ticket Master</title>
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat|Nunito:400,700"
@@ -14,6 +14,7 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -31,7 +32,6 @@
             <input
               type="text"
               id="testinput"
-              name="name"
               size="45"
               placeholder="Artiste..."
               minlength="1"
@@ -47,7 +47,6 @@
             <input
               type="text"
               id="testinput2"
-              name="name"
               size="45"
               placeholder="Departement, Villes..."
               minlength="1"
@@ -55,8 +54,10 @@
             />
             <span class="validity"></span>
           </div>
+          <p id="artiste">toto</p>
+          <input type="button" value="test" onclick="buttonClickGET()">
           <button id="btnGO">
-            <a href="#aboutSection">GO</a>
+            <p>GO</p> 
           </button>
         </form>
       </div>
@@ -65,11 +66,9 @@
           <div class="containerResultatRow">
             <div class="containerResultatCol1">
               <div class="bar">
-                <label for="uname"></label>
                 <input
                   type="text"
                   id="testinput3"
-                  name="name"
                   required
                   size="45"
                   placeholder="Artiste..."
@@ -89,6 +88,6 @@
     </div>
     <script src="js/main.js"></script>
     <script src="bundle.js"></script>
-    <script src="index.js"></script>
+  
   </body>
 </html>

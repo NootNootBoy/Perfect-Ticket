@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
+require("@babel/polyfill");
 
 module.exports = {
   entry: "./src/index.js",
@@ -31,6 +32,7 @@ module.exports = {
       filename: "index.html"
     }),
     new CopyPlugin([{ from: "./src/images", to: "images" }]),
+    new CopyPlugin([{ from: "./src/js", to: "js" }]),
     new ExtractTextWebpackPlugin("styles.css")
   ],
   devServer: {
