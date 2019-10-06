@@ -17,7 +17,7 @@ document.getElementById("scrollDL").onclick = function() {
       "linear-gradient(to right, #e0eafc, #cfdef3)";
     document.getElementById("btnGO").style.backgroundColor = "#1a343d";
     var x = document.getElementById("btnGO");
-    var y = x.getElementsByTagName("a");
+    var y = x.getElementsByTagName("*");
     var i;
     for (i = 0; i < y.length; i++) {
       y[i].style.color = "#fff";
@@ -36,7 +36,7 @@ document.getElementById("scrollDL").onclick = function() {
     document.getElementById("containerResultat").style.background = "#1a343d";
     document.getElementById("btnGO").style.backgroundColor = "#fff";
     var x = document.getElementById("btnGO");
-    var y = x.getElementsByTagName("p");
+    var y = x.getElementsByTagName("*");
     var i;
     for (i = 0; i < y.length; i++) {
       y[i].style.color = "#1a343d";
